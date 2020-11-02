@@ -22,5 +22,11 @@ public class UserValidator {
 	public boolean checkMobileNo(String MobileNo) {
 		return (MobileNo.matches("^[0-9]{1,2}[ ][0-9]{10}$"));
 	}
+
+	// Function for Checking the PassWord
+	public boolean checkPassWord(String Password) {
+		return (Password.matches("^(?=.*[0-9])" + "(?=.*[a-z])(?=.*[A-Z])" + "(?=.*[#@$^+=&%])" + "(?=\\S+$).{8,}$"));
+
+	}
 }
 

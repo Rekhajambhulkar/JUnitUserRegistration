@@ -70,4 +70,20 @@ public class JunitAUserRegistrationTest {
 		boolean isMobileNo = user.checkMobileNo("656965241");
 		Assert.assertFalse(isMobileNo);
 	}
+
+	// Test Case for Password return True
+	@Test
+	public void checkingPassWord() {
+		UserValidator user = new UserValidator();
+		boolean isPassWord = user.checkPassWord("Rekha@123");
+		Assert.assertTrue(isPassWord);
+	}
+
+	// Test Case for Password return False
+	@Test
+	public void checkingPassWordInvalidMustReturnFalse() {
+		UserValidator user = new UserValidator();
+		boolean isPassWord = user.checkPassWord("rek1f");
+		Assert.assertFalse(isPassWord);
+	}
 }
