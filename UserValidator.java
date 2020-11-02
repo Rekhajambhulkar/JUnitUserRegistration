@@ -7,5 +7,10 @@ public class UserValidator {
 		return (fName.matches("^[A-Z][a-z]{2,}"));
 	}
 
+	// Function for Checking the LastName
+	public boolean checkLastName(String Lname) {
+		return (Lname.matches("^[A-Z][a-z]{2,}"));
+	}
+
 }
 

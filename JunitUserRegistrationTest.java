@@ -23,4 +23,20 @@ public class JunitAUserRegistrationTest {
 	Assert.assertFalse(isFirstName);
 	}
 
+	// Test Case for LastName return True
+	@Test
+	public void checkingLastName() {
+		UserValidator user = new UserValidator();
+		boolean isLastName = user.checkLastName("Jambhulkar");
+		Assert.assertTrue(isLastName);
+	}
+
+	// Test Case for LastName return False
+	@Test
+	public void checkingLastNameInvalidMustReturnFalse() {
+		UserValidator user = new UserValidator();
+		boolean isLastName = user.checkLastName("jambhulkar");
+		Assert.assertFalse(isLastName);
+	}
+
 }
