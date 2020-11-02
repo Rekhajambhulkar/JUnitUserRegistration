@@ -1,7 +1,11 @@
-package com.junitassertion;
+package com.junituserregistration;
 
 public class UserValidator {
-	public static void main(String args[]) {
-		System.out.println("Welcome in UserRegistration Program");
+
+	//Function for Checking the FirstName
+	public boolean checkFirstname(String fName) {
+		return (fName.matches("^[A-Z][a-z]{2,}"));
 	}
+
 }
+
