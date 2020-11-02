@@ -54,4 +54,20 @@ public class JunitAUserRegistrationTest {
 		boolean isEmailId = user.checkEmailId(".jambhulkarrekha@111");
 		Assert.assertFalse(isEmailId);
 	}
+
+	// Test Case for MobileNo return True
+	@Test
+	public void checkingMobileNo() {
+		UserValidator user = new UserValidator();
+		boolean isMobileNo = user.checkMobileNo("91 9138124143");
+		Assert.assertTrue(isMobileNo);
+	}
+	
+	// Test Case for MobileNo return False
+	@Test
+	public void checkingMobileNoInvalidMustReturnFalse() {
+		UserValidator user = new UserValidator();
+		boolean isMobileNo = user.checkMobileNo("656965241");
+		Assert.assertFalse(isMobileNo);
+	}
 }
