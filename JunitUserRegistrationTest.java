@@ -73,17 +73,17 @@ public class JunitAUserRegistrationTest {
 
 	// Test Case for Password return True
 	@Test
-	public void checkingPassWord_MinimumEightCharacter_ReturnTrue() {
+	public void checkingPassWord_OneUpperCaseLetter_ReturnTrue() {
 		UserValidator user = new UserValidator();
-		boolean isPassWord = user.checkPassWord("rekhajambhulkar");
+		boolean isPassWord = user.checkPassWord("RekhaJambhulkar");
 		Assert.assertTrue(isPassWord);
 	}
 
 	// Test Case for Password return False
 	@Test
-	public void checkingPassWord_WhenNoMinimumEightCharacter_ReturnFalse() {
+	public void checkingPassWord_WhenNoOneUpperCaseLetter_ReturnFalse() {
 		UserValidator user = new UserValidator();
-		boolean isPassWord = user.checkPassWord("riya");
+		boolean isPassWord = user.checkPassWord("riyasane");
 		Assert.assertFalse(isPassWord);
 	}
 }
