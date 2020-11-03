@@ -86,4 +86,20 @@ public class JunitAUserRegistrationTest {
 		boolean isPassWord = user.checkPassWord("rek1f");
 		Assert.assertFalse(isPassWord);
 	}
+
+	//Test case for mood analyzer return HAPPY
+	@Test
+	public void moodAnalyser_Test_Happy() {
+		UserValidator user = new UserValidator();
+		String isMoodHappy = user.moodAnalyse("Rekha", "Jambhulkar", "jambhulkarrekha@gmail.com", "91 9822626490", "Rekha@123" );
+		Assert.assertEquals("HAPPY", isMoodHappy);
+	}
+	
+	//Test case for mood analyzer return SAD
+	@Test
+	public void moodAnalyser_Test_SAD() {
+		UserValidator user = new UserValidator();
+		String isMoodSad = user.moodAnalyse("Rekha", "Jambhulkar", "jambhulkarrekha@gmail.com", "91 9822626490", "Rekha@123" );
+		Assert.assertEquals("HAPPY", isMoodSad);
+	}
 }
