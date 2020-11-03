@@ -13,7 +13,7 @@ public class UserValidator {
 	}
 
 	// Function for Checking the EmailId
-	public boolean checkEmailId(String EmailId) {
+	public static boolean checkEmailId(String EmailId) {
 		return (EmailId.matches("^[a-zA-Z]{1,}?[A-Za-z0-9]{0,1}+([-.+]{0,1}+[a-zA-Z0-9]{1,}){0,1}"
 				+ "+@+[a-zA-Z0-9]{1,}?([-._]{0,1}+[a-zA-Z0-9]{2,}){0,1}?([-._]{0,1}" + "+[a-zA-Z]{2,}){0,1}"));
 	}
