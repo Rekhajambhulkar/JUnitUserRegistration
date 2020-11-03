@@ -73,15 +73,15 @@ public class JunitAUserRegistrationTest {
 
 	// Test Case for Password return True
 	@Test
-	public void checkingPassWord_OneNumricNumber_ReturnTrue() {
+	public void checkingPassWord_OneSpecialCharacter_ReturnTrue() {
 		UserValidator user = new UserValidator();
-		boolean isPassWord = user.checkPassWord("RekhaJambhulkar1");
+		boolean isPassWord = user.checkPassWord("RekhaJambhulkar@1");
 		Assert.assertTrue(isPassWord);
 	}
 
 	// Test Case for Password return False
 	@Test
-	public void checkingPassWord_WhenNoOneNumricNumber_ReturnFalse() {
+	public void checkingPassWord_WhenNoOneSpecialCharacter_ReturnFalse() {
 		UserValidator user = new UserValidator();
 		boolean isPassWord = user.checkPassWord("Riya1");
 		Assert.assertFalse(isPassWord);
